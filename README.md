@@ -1,5 +1,6 @@
 # R-code-for-Marketing-Analysis-Dataset
 R code for Marketing Analysis Dataset
+
 library(dplyr)
 library(mlbench)
 library(caret)
@@ -22,13 +23,21 @@ not_applicable
 #there seems to be no null values in the dataset
 
 #individual boxplot for univariant
+
 boxplot(ifood_df$Age, main="AGE box plot",ylab="AGE",col="red")
+
 boxplot(ifood_df$Income, main="INCOME box plot",ylab="INCOME",col="red")
+
 boxplot(ifood_df$Kidhome, main="KIDS AT HOME box plot",ylab="KIDS AT HOME",col="red")
+
 boxplot(ifood_df$Teenhome, main="TEENS AT HOME plot",ylab="TEENS AT HOME",col="red")
+
 boxplot(ifood_df$Recency, main="DAYS FROM THE LAST PURCHASE box plot",ylab="DAYS FROM THE LAST PURCHASE",col="red")
+
 boxplot(ifood_df$MntWines, main="AMOUNT SPENT ON WINES box plot",ylab="AMOUNT SPENT ON WINES",col="red")
+
 boxplot(ifood_df$MntFruits, main="AMOUNT SPENT ON FRUITS box plot",ylab="AMOUNT SPENT ON FRUITS",col="red")
+
 boxplot(ifood_df$MntMeatProducts, main="AMOUNT SPENT ON MEAT PRODUCTS box plot",ylab="AMOUNT SPENT ON MEAT PRODUCTS",col="red")
 boxplot(ifood_df$MntFishProducts, main="AMOUNT SPENT ON FISH PRODUCTS box plot",ylab="AMOUNT SPENT ON FISH PRODUCTS",col="red")
 boxplot(ifood_df$MntGoldProds, main="AMOUNT SPENT ON GOLD box plot",ylab="AMOUNT SPENT ON GOLD",col="red")
