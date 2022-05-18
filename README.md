@@ -10,7 +10,6 @@ library(caret)
 #Summary of the dataset 
 summary(ifood_df)
 
-#cleaning the data--------------------to do
 #now as we have understood the data and made it according to our understanding we can clean the data set by clearing the unwanted variables.
 
 #removing unwanted variables
