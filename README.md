@@ -207,6 +207,11 @@ summary(reg)
 
 multi.fit= lm(Income~ Age+MntFishProducts+MntFruits+MntGoldProds+MntMeatProducts+MntRegularProds+MntSweetProducts+MntWines+MntTotal,
               data = ifood_df)
+              
+#summary of multiple linear regression
 
 summary(multi.fit)
+
+#plotting graphs for the multiple linear regression
+
 plot(multi.fit)
