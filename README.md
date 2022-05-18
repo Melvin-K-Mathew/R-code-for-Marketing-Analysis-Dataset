@@ -1,5 +1,5 @@
 # R-code-for-Marketing-Analysis-Dataset
-R code for Marketing Analysis Dataset
+R code for Marketing Analysis for ifood Dataset 
 
 library(dplyr)
 
@@ -7,23 +7,27 @@ library(mlbench)
 
 library(caret)
 
-#EDA
+# Exploratory Data Analysis
 
-#Summary of the dataset 
+# Summary of the dataset 
 summary(ifood_df)
 
 #now as we have understood the data and made it according to our understanding we can clean the data set by clearing the unwanted variables.
 
-#removing unwanted variables
+# removing unwanted variables
+
 final = select(ifood_df, -Kidhome, -Teenhome)
+
 final
 
-#check the null values
+# check the null values
+
 not_applicable = sum(is.na(ifood_df))
+
 not_applicable
 #there seems to be no null values in the dataset
 
-#individual boxplot for univariant
+# individual boxplot for univariant
 
 boxplot(ifood_df$Age, main="AGE box plot",ylab="AGE",col="red")
 
@@ -57,7 +61,7 @@ boxplot(ifood_df$NumStorePurchases, main="NUMBER OF PURCHASES MADE DIRECTLY FROM
 
 boxplot(ifood_df$NumWebVisitsMonth, main="NUMBER OF VISITS TO COMPANY WEBSITE IN LAST MONTH box plot",ylab="NUMBER OF VISITS TO COMPANY WEBSITE IN LAST MONTH",col="red")
 
-#boxplot for bivariant data on the basis of age of kids
+#  boxplot for bivariant data on the basis of age of kids
 
 boxplot(ifood_df[,c("Kidhome", "Teenhome")],  # plots columns between the homes with teens and kids
         main="Box-Plots for homes with teens and kids", # gives plot main label
@@ -68,7 +72,7 @@ boxplot(ifood_df[,c("Kidhome", "Teenhome")],  # plots columns between the homes 
         xlab="Number of People"
 )
 
-#boxplot for multivariant data on marital basis
+# boxplot for multivariant data on marital basis
 
 boxplot(ifood_df[,c("marital_Divorced", "marital_Married", "marital_Single", "marital_Together", "marital_Widow")],  # plots columns across the different marital status
         main="Box-Plots for people with Different marital status", # gives plot main label
@@ -79,7 +83,7 @@ boxplot(ifood_df[,c("marital_Divorced", "marital_Married", "marital_Single", "ma
         xlab="Number of People"
 )
 
-#boxplot for multivariant data on the basis of the amount spent
+# boxplot for multivariant data on the basis of the amount spent
 
 boxplot(ifood_df[,c("MntWines", "MntFruits", "MntMeatProducts", "MntFishProducts", "MntGoldProds","MntSweetProducts")],  # plots columns across the differnet expenses
         main="Box-Plots for people and their Different expenses", # gives plot main label
